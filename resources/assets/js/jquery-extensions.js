@@ -18,7 +18,7 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 // Show a success message after the element it's called upon.
 jQuery.fn.showSuccess = function (message) {
     var elem = $(this);
-    var success = $('<div class="text-pos" style="display:none;"><i class="zmdi zmdi-check-circle"></i>' + message + '</div>');
+    var success = $('<div class="text-pos" style="display:none;"><img src="/icons/check-sircle.svg" alt="Success">' + message + '</div>');
     elem.after(success);
     success.slideDown(400, function () {
         setTimeout(function () {
@@ -34,7 +34,7 @@ jQuery.fn.showFailure = function (messageMap) {
     var elem = $(this);
     $.each(messageMap, function (key, messages) {
         var input = elem.find('[name="' + key + '"]').last();
-        var fail = $('<div class="text-neg" style="display:none;"><i class="zmdi zmdi-alert-circle"></i>' + messages.join("\n") + '</div>');
+        var fail = $('<div class="text-neg" style="display:none;"><img src="/icons/error-circle.svg" alt="Error">' + messages.join("\n") + '</div>');
         input.after(fail);
         fail.slideDown(400, function () {
             setTimeout(function () {

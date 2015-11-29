@@ -9,7 +9,7 @@
                 <div class="col-xs-11 faded">
                     <div class="action-buttons">
                         @if($currentUser->can('book-create'))
-                            <a href="/books/create" class="text-pos text-button"><i class="zmdi zmdi-plus"></i>Add new book</a>
+                            <a href="/books/create" class="text-pos text-button">@icon('plus')Add new book</a>
                         @endif
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     {!! $books->render() !!}
                 @else
                     <p class="text-muted">No books have been created.</p>
-                    <a href="/books/create" class="text-pos"><i class="zmdi zmdi-edit"></i>Create one now</a>
+                    <a href="/books/create" class="text-pos">@icon('edit')Create one now</a>
                 @endif
             </div>
             <div class="col-sm-4 col-sm-offset-1">

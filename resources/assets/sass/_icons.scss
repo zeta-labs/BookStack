@@ -1,0 +1,36 @@
+
+span.icon {
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: top;
+  margin-top: 0.27em;
+  text-align: center;
+  width: 1em;
+  height: 1em;
+  svg {
+    display: inline-block;
+    fill: #444;
+    height: auto;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+a span.icon, button span.icon {
+  margin-right: 0.5em;
+}
+
+button span.icon {
+  margin-top: 0.2em;
+}
+
+span.large span.icon {
+  width: 1.666em;
+  height: 1.666em;
+  margin-top: 0.16em;
+}
+
+#social-login span.icon {
+  width: 64px;
+  height: 64px;
+}

@@ -15,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        // Custom blade template elements
+        \Blade::directive('icon', function($iconName) {
+            return "<span class='icon icon-<?php echo{$iconName} ?>'> <?php echo file_get_contents(base_path('resources/assets/icons/' . with{$iconName} . '.svg')) ?></span>";
+        });
     }
 
     /**

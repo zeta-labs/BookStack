@@ -43,12 +43,11 @@
                         </div>
 
                         <form @submit="deleteImage" v-el:image-delete-form>
-                            <button class="button neg"><i class="zmdi zmdi-delete"></i>Delete Image</button>
+                            <button class="button neg"><img src="/icons/delete.svg" alt="Delete">Delete Image</button>
                         </form>
                     </div>
                     <div class="image-manager-bottom">
-                        <button class="button pos anim fadeIn" v-show="selectedImage" @click="selectButtonClick"><i
-                                class="zmdi zmdi-square-right"></i>Select Image
+                        <button class="button pos anim fadeIn" v-show="selectedImage" @click="selectButtonClick">Select Image
                         </button>
                     </div>
                 </div>
@@ -72,7 +71,8 @@
                 dependantPages: false,
                 deleteForm: {},
                 token: document.querySelector('meta[name=token]').getAttribute('content'),
-                dataLoaded: false
+                dataLoaded: false,
+                icons: icons
             }
         },
 

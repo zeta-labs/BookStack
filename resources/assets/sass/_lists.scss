@@ -45,15 +45,15 @@
   margin: 0 0 $-l 0;
   transition: all ease-in-out 180ms;
   user-select: none;
-  i.zmdi-caret-right {
+  .icon-arrow-right svg {
     transition: all ease-in-out 180ms;
     transform: rotate(0deg);
-    transform-origin: 25% 50%;
+    transform-origin: 50% 50%;
   }
   &.open {
     margin-bottom: 0;
   }
-  &.open i.zmdi-caret-right {
+  &.open .icon-arrow-right svg {
     transform: rotate(90deg);
   }
 }
@@ -128,6 +128,15 @@
     list-style: none;
     margin: 0;
   }
+  .icon-book svg {
+    fill: $color-book;
+  }
+  .icon-chapter svg {
+    fill: $color-chapter;
+  }
+  .icon-page svg {
+    fill: $color-page;
+  }
   .book {
     color: $color-book !important;
     &.selected {
@@ -142,6 +151,9 @@
   }
   .chapter-toggle {
     padding-left: $-s;
+    .icon-page svg {
+      fill: #666;
+    }
   }
   .list-item-chapter {
     border-left: 5px solid $color-chapter;

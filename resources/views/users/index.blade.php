@@ -10,7 +10,7 @@
         <h1>Users</h1>
         @if($currentUser->can('user-create'))
             <p>
-                <a href="/users/create" class="text-pos"><i class="zmdi zmdi-account-add"></i>Add new user</a>
+                <a href="/users/create" class="text-pos">@icon('user-add')Add new user</a>
             </p>
         @endif
         <table class="table">

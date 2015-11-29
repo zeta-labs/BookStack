@@ -8,10 +8,13 @@ header {
   top: 0;
   background-color: $primary-dark;
   color: #fff;
+  border-bottom: 1px solid #DDD;
   .padded {
     padding: $-m;
   }
-  border-bottom: 1px solid #DDD;
+  .icon svg {
+    fill: #FFFFFF;
+  }
   //margin-bottom: $-l;
   .links {
     display: inline-block;
@@ -36,7 +39,6 @@ header {
     display: inline-block;
   }
   .avatar {
-    //margin-top: (45px/2);
     width: 30px;
     height: 30px;
   }
@@ -48,25 +50,20 @@ header {
     > * {
       vertical-align: top;
     }
-    > span, > i {
+    > span {
       padding-left: $-xs;
       display: inline-block;
     }
     > span {
       padding-top: $-xxs;
     }
-    > i {
-      padding-top: $-xs*1.2;
+    span.large {
+      padding-top: 0;
     }
     @include smaller-than($screen-md) {
       padding-left: $-xs;
       .name {
         display: none;
-      }
-      i {
-        font-size: 2em;
-        padding-left: 0;
-        padding-top: 0;
       }
     }
   }
@@ -161,6 +158,9 @@ form.search-box {
   padding: $-xs 0;
   color: #555;
   text-align: left !important;
+  .icon svg {
+    fill: #555;
+  }
   a {
     display: block;
     padding: $-xs $-m;
@@ -169,11 +169,9 @@ form.search-box {
       text-decoration: none;
       background-color: #EEE;
     }
-    i {
+    span.icon {
       margin-right: $-m;
-      padding-right: 0;
-      display: inline;
-      width: 22px;
+      width: 1.2em;
     }
   }
   li.border-bottom {
@@ -196,6 +194,9 @@ form.search-box {
     &:hover {
       opacity: 1;
       text-decoration: none;
+    }
+    .icon svg {
+      transition: fill ease-in-out 120ms;
     }
   }
 }

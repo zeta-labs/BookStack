@@ -1,13 +1,13 @@
 <div class="page">
     <h3>
-        <a href="{{ $page->getUrl() }}" class="text-page"><i class="zmdi zmdi-file-text"></i>{{ $page->name }}</a>
+        <a href="{{ $page->getUrl() }}" class="text-page">@icon('page'){{ $page->name }}</a>
     </h3>
 
     @if(isset($showMeta) && $showMeta)
         <div class="meta">
-            <span class="text-book"><i class="zmdi zmdi-book"></i> {{ $page->book->name }}</span>
+            <span class="text-book">@icon('book') {{ $page->book->name }}</span>
             @if($page->chapter)
-                <span class="text-chapter"><i class="zmdi zmdi-collection-bookmark"></i> {{ $page->chapter->name }}</span>
+                <span class="text-chapter">@icon('chapter') {{ $page->chapter->name }}</span>
             @endif
          </div>
     @endif

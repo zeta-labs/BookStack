@@ -18,7 +18,7 @@
                     @foreach($books as $otherBook)
                         @if($otherBook->id !== $book->id)
                         <div>
-                            <a href="/books/{{ $otherBook->slug }}/sort-item" class="text-book"><i class="zmdi zmdi-book"></i>{{ $otherBook->name }}</a>
+                            <a href="/books/{{ $otherBook->slug }}/sort-item" class="text-book">@icon('book'){{ $otherBook->name }}</a>
                         </div>
                         @endif
                     @endforeach

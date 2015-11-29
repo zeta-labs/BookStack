@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-sm-6 faded">
                     <div class="breadcrumbs">
-                        <a href="{{$book->getUrl()}}" class="text-book text-button"><i class="zmdi zmdi-book"></i>{{ $book->name }}</a>
+                        <a href="{{$book->getUrl()}}" class="text-book text-button">@icon('book'){{ $book->name }}</a>
                         @if($page->hasChapter())
                             <span class="sep">&raquo;</span>
                             <a href="{{ $page->chapter->getUrl() }}" class="text-chapter text-button">
-                                <i class="zmdi zmdi-collection-bookmark"></i>
+                                @icon('chapter')
                                 {{$page->chapter->name}}
                             </a>
                         @endif
@@ -20,11 +20,11 @@
                 <div class="col-sm-6 faded">
                     <div class="action-buttons">
                         @if($currentUser->can('page-update'))
-                            <a href="{{$page->getUrl() . '/revisions'}}" class="text-primary text-button"><i class="zmdi zmdi-replay"></i>Revisions</a>
-                            <a href="{{$page->getUrl() . '/edit'}}" class="text-primary text-button" ><i class="zmdi zmdi-edit"></i>Edit</a>
+                            <a href="{{$page->getUrl() . '/revisions'}}" class="text-primary text-button">@icon('history')Revisions</a>
+                            <a href="{{$page->getUrl() . '/edit'}}" class="text-primary text-button" >@icon('edit')Edit</a>
                         @endif
                         @if($currentUser->can('page-delete'))
-                            <a href="{{$page->getUrl() . '/delete'}}" class="text-neg text-button"><i class="zmdi zmdi-delete"></i>Delete</a>
+                            <a href="{{$page->getUrl() . '/delete'}}" class="text-neg text-button">@icon('delete')Delete</a>
                         @endif
                     </div>
                 </div>
@@ -40,9 +40,9 @@
 
                     <div class="pointer-container" id="pointer">
                         <div class="pointer anim">
-                            <i class="zmdi zmdi-link"></i>
+                            @icon('link')
                             <input readonly="readonly" type="text" placeholder="url">
-                            <button class="button icon" title="Copy Link" data-clipboard-text=""><i class="zmdi zmdi-copy"></i></button>
+                            <button class="button icon" title="Copy Link" data-clipboard-text="">@icon('copy')</button>
                         </div>
                     </div>
 

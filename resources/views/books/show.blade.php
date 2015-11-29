@@ -8,17 +8,17 @@
                 <div class="col-md-12">
                     <div class="action-buttons faded">
                         @if($currentUser->can('page-create'))
-                            <a href="{{$book->getUrl() . '/page/create'}}" class="text-pos text-button"><i class="zmdi zmdi-plus"></i> New Page</a>
+                            <a href="{{$book->getUrl() . '/page/create'}}" class="text-pos text-button">@icon('plus') New Page</a>
                         @endif
                         @if($currentUser->can('chapter-create'))
-                            <a href="{{$book->getUrl() . '/chapter/create'}}" class="text-pos text-button"><i class="zmdi zmdi-plus"></i> New Chapter</a>
+                            <a href="{{$book->getUrl() . '/chapter/create'}}" class="text-pos text-button">@icon('plus') New Chapter</a>
                         @endif
                         @if($currentUser->can('book-update'))
-                            <a href="{{$book->getEditUrl()}}" class="text-primary text-button"><i class="zmdi zmdi-edit"></i>Edit</a>
-                            <a href="{{ $book->getUrl() }}/sort" class="text-primary text-button"><i class="zmdi zmdi-sort"></i>Sort</a>
+                            <a href="{{$book->getEditUrl()}}" class="text-primary text-button">@icon('edit')Edit</a>
+                            <a href="{{ $book->getUrl() }}/sort" class="text-primary text-button">@icon('sort')Sort</a>
                         @endif
                         @if($currentUser->can('book-delete'))
-                            <a href="{{ $book->getUrl() }}/delete" class="text-neg text-button"><i class="zmdi zmdi-delete"></i>Delete</a>
+                            <a href="{{ $book->getUrl() }}/delete" class="text-neg text-button">@icon('delete')Delete</a>
                         @endif
                     </div>
                 </div>
@@ -49,9 +49,9 @@
                         @else
                             <p class="text-muted">No pages or chapters have been created for this book.</p>
                             <p>
-                                <a href="{{$book->getUrl() . '/page/create'}}" class="text-page"><i class="zmdi zmdi-file-text"></i>Create a new page</a>
+                                <a href="{{$book->getUrl() . '/page/create'}}" class="text-page">@icon('page')Create a new page</a>
                                 &nbsp;&nbsp;<em class="text-muted">-or-</em>&nbsp;&nbsp;&nbsp;
-                                <a href="{{$book->getUrl() . '/chapter/create'}}" class="text-chapter"><i class="zmdi zmdi-collection-bookmark"></i>Add a chapter</a>
+                                <a href="{{$book->getUrl() . '/chapter/create'}}" class="text-chapter">@icon('chapter')Add a chapter</a>
                             </p>
                             <hr>
                         @endif
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="search-results" v-if="searching">
-                    <h3 class="text-muted">Search Results <a v-if="searching" v-on:click="clearSearch" class="text-small"><i class="zmdi zmdi-close"></i>Clear Search</a></h3>
+                    <h3 class="text-muted">Search Results <a v-if="searching" v-on:click="clearSearch" class="text-small">@icon('close')Clear Search</a></h3>
                     <div v-if="!searchResults">
                         @include('partials/loading-icon')
                     </div>
@@ -79,8 +79,8 @@
                     <form v-on:submit="searchBook" v-on:input="checkSearchForm" v-el:form action="/search/book/{{ $book->id }}">
                         {!! csrf_field() !!}
                         <input v-model="searchTerm" type="text" name="term" placeholder="Search This Book">
-                        <button type="submit"><i class="zmdi zmdi-search"></i></button>
-                        <button v-if="searching" v-on:click="clearSearch" type="button"><i class="zmdi zmdi-close"></i></button>
+                        <button type="submit">@icon('search')</button>
+                        <button v-if="searching" v-on:click="clearSearch" type="button">@icon('close')</button>
                     </form>
                 </div>
                 <div class="activity anim fadeIn">

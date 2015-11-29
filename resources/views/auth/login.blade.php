@@ -2,7 +2,7 @@
 
 @section('header-buttons')
     @if(Setting::get('registration-enabled'))
-        <a href="/register"><i class="zmdi zmdi-account-add"></i>Sign up</a>
+        <a href="/register">@icon('user-add')Sign up</a>
     @endif
 @stop
 
@@ -41,12 +41,14 @@
             @if(count($socialDrivers) > 0)
                 <hr class="margin-top">
                 <h3 class="text-muted">Social Login</h3>
-                @if(isset($socialDrivers['google']))
-                    <a href="/login/service/google" style="color: #DC4E41;"><i class="zmdi zmdi-google-plus-box zmdi-hc-4x"></i></a>
-                @endif
-                @if(isset($socialDrivers['github']))
-                    <a href="/login/service/github" style="color:#444;"><i class="zmdi zmdi-github zmdi-hc-4x"></i></a>
-                @endif
+                <div id="social-login">
+                    @if(isset($socialDrivers['google']))
+                        <a href="/login/service/google" style="color: #DC4E41;">@icon('gplus')</a>
+                    @endif
+                    @if(isset($socialDrivers['github']))
+                        <a href="/login/service/github" style="color:#444;">@icon('github')</a>
+                    @endif
+                </div>
             @endif
         </div>
     </div>

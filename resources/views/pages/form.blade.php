@@ -7,15 +7,15 @@
     <div class="faded-small">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 faded">
+                <div class="col-sm-4 faded">
                     <div class="action-buttons text-left">
-                        <a onclick="$('body>header').slideToggle();" class="text-button text-primary"><i class="zmdi zmdi-swap-vertical"></i>Toggle Header</a>
+                        <a onclick="$('body>header').slideToggle();" class="text-button text-primary">@icon('toggle-header')Toggle Header</a>
                     </div>
                 </div>
-                <div class="col-md-8 faded">
+                <div class="col-sm-8 faded">
                     <div class="action-buttons">
-                        <a href="{{ back()->getTargetUrl() }}" class="text-button text-primary"><i class="zmdi zmdi-close"></i>Cancel</a>
-                        <button type="submit" id="save-button" class="text-button  text-pos"><i class="zmdi zmdi-floppy"></i>Save Page</button>
+                        <a href="{{ back()->getTargetUrl() }}" class="text-button text-primary">@icon('close')Cancel</a>
+                        <button type="submit" id="save-button" class="text-button  text-pos">@icon('save')Save Page</button>
                     </div>
                 </div>
             </div>

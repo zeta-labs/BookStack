@@ -93,10 +93,15 @@
     height: 28px;
     font-size: 12px;
   }
-  > i {
-    color: #888;
-    font-size: 18px;
-    padding-top: 4px;
+  button .icon svg {
+    fill: #FFF;
+  }
+  button .icon {
+    margin: 0;
+  }
+  .icon-link {
+    margin-top: $-xs;
+    margin-right: $-xs;
   }
   .button {
     line-height: 1;

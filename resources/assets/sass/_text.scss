@@ -164,6 +164,12 @@ p.pos, p .pos, span.pos, .text-pos {
   &:hover {
     color: $positive;
   }
+  svg {
+    fill: $positive;
+  }
+  &:hover .icon svg {
+    fill: $positive;
+  }
 }
 
 p.neg, p .neg, span.neg, .text-neg {
@@ -171,26 +177,35 @@ p.neg, p .neg, span.neg, .text-neg {
   &:hover {
     color: $negative;
   }
+  &:hover .icon svg {
+    fill: $negative;
+  }
 }
 
 p.muted, p .muted, span.muted, .text-muted {
-	color: lighten($text-dark, 26%);
-    &.small, .small {
-      color: lighten($text-dark, 42%);
-    }
+  color: lighten($text-dark, 26%);
+  &.small, .small {
+    color: lighten($text-dark, 42%);
+  }
 }
 
 p.primary, p .primary, span.primary, .text-primary {
-	color: $primary;
+  color: $primary;
   &:hover {
     color: $primary;
+  }
+  &:hover .icon svg {
+    fill: $primary;
   }
 }
 
 p.secondary, p .secondary, span.secondary, .text-secondary {
-	color: $secondary;
+  color: $secondary;
   &:hover {
     color: $secondary;
+  }
+  &:hover .icon svg {
+    fill: $secondary;
   }
 }
 
@@ -199,17 +214,26 @@ p.secondary, p .secondary, span.secondary, .text-secondary {
   &:hover {
     color: $color-book;
   }
+  .icon-book svg {
+    fill: $color-book;
+  }
 }
 .text-page {
   color: $color-page;
   &:hover {
     color: $color-page;
   }
+  .icon-page svg {
+    fill: $color-page;
+  }
 }
 .text-chapter {
   color: $color-chapter;
   &:hover {
     color: $color-chapter;
+  }
+  .icon-chapter svg {
+    fill: $color-chapter;
   }
 }
 

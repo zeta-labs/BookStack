@@ -48,32 +48,32 @@
                 <div class="col-lg-4 col-sm-3 text-center">
                     <form action="/search/all" method="GET" class="search-box">
                         <input id="header-search-box-input" type="text" name="term" tabindex="2" value="{{ isset($searchTerm) ? $searchTerm : '' }}">
-                        <button id="header-search-box-button" type="submit" class="text-button"><i class="zmdi zmdi-search"></i></button>
+                        <button id="header-search-box-button" type="submit" class="text-button">@icon('search')</button>
                     </form>
                 </div>
                 <div class="col-lg-4 col-sm-5">
                     <div class="float right">
                         <div class="links text-center">
-                            <a href="/books"><i class="zmdi zmdi-book"></i>Books</a>
+                            <a href="/books">@icon('book')Books</a>
                             @if($currentUser->can('settings-update'))
-                                <a href="/settings"><i class="zmdi zmdi-settings"></i>Settings</a>
+                                <a href="/settings">@icon('settings')Settings</a>
                             @endif
                             @if(!$signedIn)
-                                <a href="/login"><i class="zmdi zmdi-sign-in"></i>Sign In</a>
+                                <a href="/login">@icon('sign-in')Sign In</a>
                             @endif
                         </div>
                         @if($signedIn)
                             <div class="dropdown-container" data-dropdown>
                                 <span class="user-name" data-dropdown-toggle>
                                     <img class="avatar" src="{{$currentUser->getAvatar(30)}}" alt="{{ $currentUser->name }}">
-                                    <span class="name">{{ $currentUser->name }}</span> <i class="zmdi zmdi-caret-down"></i>
+                                    <span class="name">{{ $currentUser->name }}</span> <span class="large">@icon('caret-down')</span>
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="/users/{{$currentUser->id}}" class="text-primary"><i class="zmdi zmdi-edit zmdi-hc-lg"></i>Edit Profile</a>
+                                        <a href="/users/{{$currentUser->id}}" class="text-primary">@icon('edit')Edit Profile</a>
                                     </li>
                                     <li>
-                                        <a href="/logout" class="text-neg"><i class="zmdi zmdi-run zmdi-hc-lg"></i>Logout</a>
+                                        <a href="/logout" class="text-neg">@icon('logout')Logout</a>
                                     </li>
                                 </ul>
                             </div>
