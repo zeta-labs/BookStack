@@ -159,7 +159,7 @@ span.code {
 /*
  * Text colors
  */
-p.pos, p .pos, span.pos, .text-pos {
+p.pos, p .pos, span.pos, .text-pos, span.success {
   color: $positive;
   &:hover {
     color: $positive;
@@ -172,7 +172,7 @@ p.pos, p .pos, span.pos, .text-pos {
   }
 }
 
-p.neg, p .neg, span.neg, .text-neg {
+p.neg, p .neg, span.neg, .text-neg, span.error {
   color: $negative;
   &:hover {
     color: $negative;

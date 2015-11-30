@@ -15,38 +15,6 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     };
 });
 
-// Show a success message after the element it's called upon.
-jQuery.fn.showSuccess = function (message) {
-    var elem = $(this);
-    var success = $('<div class="text-pos" style="display:none;"><img src="/icons/check-sircle.svg" alt="Success">' + message + '</div>');
-    elem.after(success);
-    success.slideDown(400, function () {
-        setTimeout(function () {
-            success.slideUp(400, function () {
-                success.remove();
-            })
-        }, 2000);
-    });
-};
-
-// Show a failure messages from laravel. Searches for the name of the inputs.
-jQuery.fn.showFailure = function (messageMap) {
-    var elem = $(this);
-    $.each(messageMap, function (key, messages) {
-        var input = elem.find('[name="' + key + '"]').last();
-        var fail = $('<div class="text-neg" style="display:none;"><img src="/icons/error-circle.svg" alt="Error">' + messages.join("\n") + '</div>');
-        input.after(fail);
-        fail.slideDown(400, function () {
-            setTimeout(function () {
-                fail.slideUp(400, function () {
-                    fail.remove();
-                })
-            }, 2000);
-        });
-    });
-
-};
-
 // Submit the form that the called upon element sits in.
 jQuery.fn.submitForm = function() {
     $(this).closest('form').submit();

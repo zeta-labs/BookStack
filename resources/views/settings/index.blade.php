@@ -81,6 +81,8 @@
 
 </div>
 
-<image-manager></image-manager>
+@include('partials/image-manager')
+@include('partials/image-picker')
+@include('partials/toggle-switch')
 
 @stop

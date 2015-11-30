@@ -16,5 +16,5 @@
             @endif
         </form>
     </div>
-    <image-manager></image-manager>
+    @include('partials/image-manager')
 @stop

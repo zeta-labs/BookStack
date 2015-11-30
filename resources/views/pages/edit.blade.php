@@ -14,6 +14,6 @@
             @include('pages/form', ['model' => $page])
         </form>
     </div>
-    <image-manager></image-manager>
+    @include('partials/image-manager')
 
 @stop

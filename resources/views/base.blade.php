@@ -28,11 +28,19 @@
         </div>
     @endif
 
+    <div class="notification anim pos hidden" id="notification-success">
+        <i class="zmdi zmdi-mood"></i> <span class="text"></span>
+    </div>
+
     @if(Session::has('error'))
         <div class="notification anim neg stopped">
             <i class="zmdi zmdi-alert-circle"></i> <span>{{ Session::get('error') }}</span>
         </div>
     @endif
+
+    <div class="notification anim neg stopped hidden" id="notification-error">
+        <i class="zmdi zmdi-alert-circle"></i> <span class="text"></span>
+    </div>
 
     <header id="header">
         <div class="container">

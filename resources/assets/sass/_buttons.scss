@@ -17,6 +17,9 @@
     text-decoration: none;
     color: $textColor;
   }
+  .icon svg {
+    fill: $textColor;
+  }
 }
 
 // Button Specific Variables

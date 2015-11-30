@@ -16,8 +16,6 @@
 @import "lists";
 @import "pages";
 
-[v-cloak] {display: none;}
-
 // Jquery Sortable Styles
 .dragged {
   position: absolute;
@@ -70,6 +68,9 @@ body.dragging, body.dragging * {
     background-color: $negative;
     color: #EEE;
   }
+  &.hidden {
+    display: none;
+  }
 }
 
 // Loading icon
@@ -116,3 +117,5 @@ $loadingSize: 10px;
     padding-right: $-s;
   }
 }
+
+*[v-cloak], *[v-show], *[v-if] {display: none;}
