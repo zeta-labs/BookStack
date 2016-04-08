@@ -70,7 +70,7 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'enginie'   => 'MyISAM',
+            'engine'    => 'MyISAM',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'forge'),
             'username'  => env('DB_USERNAME', 'forge'),
